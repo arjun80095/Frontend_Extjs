@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="frontendAction" class="com.frontend.Action.RegisterFormAction">
+		<property name="frontendManager" ref="frontendManager"/>
+	</bean>
+	
+	<bean id="frontendManager" class="com.frontend.Manager.Impl.RegisterFormManagerImpl">
+		<property name="frontendDao" ref="frontendDao"/>
+	</bean>
+	
+	<bean id="frontendDao" class="com.frontend.Dao.Impl.RegisterFormDaoImpl"></bean>
+	
+	<bean id="sakilaAction" class="com.frontend.Action.SakilaAction">
+		<property name="sakilaManager" ref="sakilaManager"/>
+	</bean>
+	
+	<bean id="sakilaManager" class="com.frontend.Manager.Impl.SakilaManagerImpl">
+		<property name="sakilaDao" ref="sakilaDao"/>
+	</bean>
+	
+	<bean id="sakilaDao" class="com.frontend.Dao.Impl.SakilaDaoImpl"></bean>
+	
+	
+
+</beans>

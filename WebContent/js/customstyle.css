@@ -1,0 +1,13 @@
+.x-panel-header-default {
+    font-size: 20px;
+	border: 1px solid #5fa2dd;
+	
+	color:black;
+}
+
+.clipart{
+    vertical-align:middle;
+    display:inline-block;
+    clear:left;
+    font-size: 20px;
+}

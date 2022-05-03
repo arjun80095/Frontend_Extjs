@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+   "http://struts.apache.org/dtds/struts-2.5.dtd">
+   
+ <struts>
+ 	
+ 	<constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.serve.static" value="true" />
+	<constant name="struts.action.extention" value="do" />
+	<constant name="struts.action.excludePattern" value="./static/." />
+ 	
+ 	<package name="default" extends="struts-default,json-default" namespace="/">
+ 	
+ 		<global-results>
+ 			<result name="success">
+ 				/WEB-INF/jsp/output.jsp
+ 			</result>
+ 		</global-results>
+ 	
+ 		<action name="fetchData" class="sakilaAction" method="getSakilaData"></action>
+ 		<action name="saveOrUpdateFilm" class="sakilaAction" method="addOrUpdateFilm"></action>
+ 		<action name="deleteFilm" class="sakilaAction" method="deleteFilm"></action>
+ 	</package>
+ 
+ </struts>
+ 

@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"https://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.frontend.Model.Language" table="language">
+	
+		<meta attribute="class-description">
+			The meta tag is used for describing your class
+		</meta>
+		
+		<id name="languageId" type="int" column="language_id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="name" type="string" column="name" />
+		
+		<property name="lastUpdate" type="date" column="last_update" />
+	</class>
+	
+</hibernate-mapping>
